@@ -1802,7 +1802,7 @@
 	body {
 		background: #fff;
 		height: 100%;
-		font-family: 'Avenir', sans-serif;
+		font-family: 'Book Antiqua', sans-serif;
 		font-weight: 300;
 		font-size: 18pt;
 		line-height: 1.75em;
@@ -2888,7 +2888,7 @@
 /* One */
 
 	#one {
-		background: url("images/overlay.png"), url("../../photography/whoiam.jpg");
+		background: url("images/overlay.png"), url("../../photography/HEAD.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -2896,12 +2896,40 @@
 
 /* Two */
 
-	#two {
-		background: url("images/overlay.png"), url("../../photography/whatido.jpg");
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
+	#two .row.images .image {
+		-moz-transition: all 1s ease;
+		-webkit-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+		-moz-transform: translateZ(0);
+		-webkit-transform: translateZ(0);
+		-ms-transform: translateZ(0);
+		transform: translateZ(0);
+		position: relative;
+		top: 0;
+		left: 0;
+		opacity: 1.0;
 	}
+
+	#two .row.images.inactive .image {
+		opacity: 0;
+	}
+
+		#two .row.images.inactive .image.from-left {
+			left: -14em;
+		}
+
+		#two .row.images.inactive .image.from-right {
+			left: 14em;
+		}
+
+		#two .row.images.inactive .image.from-top {
+			top: -7em;
+		}
+
+		#two .row.images.inactive .image.from-bottom {
+			top: 7em;
+		}
 
 /* Work */
 
@@ -2939,6 +2967,44 @@
 		#work .row.images.inactive .image.from-bottom {
 			top: 7em;
 		}
+
+/* dance */
+
+	#dance .row.images .image {
+		-moz-transition: all 1s ease;
+		-webkit-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+		-moz-transform: translateZ(0);
+		-webkit-transform: translateZ(0);
+		-ms-transform: translateZ(0);
+		transform: translateZ(0);
+		position: relative;
+		top: 0;
+		left: 0;
+		opacity: 1.0;
+	}
+
+	#dance .row.images.inactive .image {
+		opacity: 0;
+	}
+
+		#dance .row.images.inactive .image.from-left {
+			left: -14em;
+		}
+
+		#dance .row.images.inactive .image.from-right {
+			left: 14em;
+		}
+
+		#dance .row.images.inactive .image.from-top {
+			top: -7em;
+		}
+
+		#dance .row.images.inactive .image.from-bottom {
+			top: 7em;
+		}
+
 
 /* Contact */
 

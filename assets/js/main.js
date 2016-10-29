@@ -99,8 +99,64 @@
 								leave:		function() { $(this).addClass('inactive'); }
 							});
 
-					// Work.
-						$('#work')
+
+							// Work.
+								$('#work')
+									.scrollex({
+										top:		'40vh',
+										bottom:		'30vh',
+										delay:		50,
+										initialize:	function() {
+
+														var t = $(this);
+
+														t.find('.row.images')
+															.addClass('inactive');
+
+													},
+										terminate:	function() {
+
+														var t = $(this);
+
+														t.find('.row.images')
+															.removeClass('inactive');
+
+													},
+										enter:		function() {
+
+														var t = $(this),
+															rows = t.find('.row.images'),
+															length = rows.length,
+															n = 0;
+
+														rows.each(function() {
+															var row = $(this);
+															window.setTimeout(function() {
+																row.removeClass('inactive');
+															}, 100 * (length - n++));
+														});
+
+													},
+										leave:		function(t) {
+
+														var t = $(this),
+															rows = t.find('.row.images'),
+															length = rows.length,
+															n = 0;
+
+														rows.each(function() {
+															var row = $(this);
+															window.setTimeout(function() {
+																row.addClass('inactive');
+															}, 100 * (length - n++));
+														});
+
+													}
+									});
+
+
+					// photography.
+						$('#dance')
 							.scrollex({
 								top:		'40vh',
 								bottom:		'30vh',
